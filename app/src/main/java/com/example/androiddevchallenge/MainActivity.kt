@@ -27,8 +27,8 @@ import androidx.compose.ui.tooling.preview.Preview
 import com.example.androiddevchallenge.ui.theme.MyTheme
 import kotlinx.coroutines.launch
 import androidx.lifecycle.viewmodel.compose.viewModel
-import com.example.androiddevchallenge.ui.theme.PuppyDetail
-import com.example.androiddevchallenge.ui.theme.PuppyList
+import com.example.androiddevchallenge.ui.PuppyDetail
+import com.example.androiddevchallenge.ui.PuppyList
 
 class MainActivity : AppCompatActivity() {
     private val viewModel by viewModels<MainViewModel>()
