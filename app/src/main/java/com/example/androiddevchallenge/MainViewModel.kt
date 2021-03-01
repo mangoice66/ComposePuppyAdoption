@@ -26,62 +26,52 @@ class MainViewModel : ViewModel() {
         listOf(
             Puppy(
                 "Butch",
-                "Butch has had a horrible start to his short life. " +
-                        "He was found in Mexico with his throat cut from his neck all the way to his chest. ",
+                "Butch has had a horrible start to his short life. He was found in Mexico with his throat cut from his neck all the way to his chest. ",
                 "Young", "Male", "Small", R.drawable.img_puppy_butch, "Los Angeles, CA"
             ),
             Puppy(
                 "Storm",
-                "Storm is an absolute dream dog in need of his forever home." +
-                        "He is loving, great with people and great with dogs.",
+                "Storm is an absolute dream dog in need of his forever home.He is loving, great with people and great with dogs.",
                 "Adult", "Male", "Large", R.drawable.img_puppy_storm, "Los Angeles, CA"
             ),
             Puppy(
                 "Freddie",
-                "Freddie is an amazingly sweet" +
-                        ", energetic and happy boy who is around 1 years old and is looking for his forever home!",
+                "Freddie is an amazingly sweet, energetic and happy boy who is around 1 years old and is looking for his forever home!",
                 "Young", "Male", "Large", R.drawable.img_puppy_freddie, "Los Angeles, CA"
             ),
             Puppy(
                 "Bora",
-                "Bora is a 2 year old Shepherd mix looking for her forever home! " +
-                        "She was found in Mexico with her litter of puppies.",
+                "Bora is a 2 year old Shepherd mix looking for her forever home! She was found in Mexico with her litter of puppies.",
                 "Adult", "Female", "Medium", R.drawable.img_puppy_bora, "Los Angeles, CA"
             ),
             Puppy(
                 "JoJo",
-                "This is very affectionate young female a red heeler. " +
-                        "She got to our rescue via neighbours who rescued her from the owner who was neglecting her.",
+                "This is very affectionate young female a red heeler. She got to our rescue via neighbours who rescued her from the owner who was neglecting her.",
                 "Adult", "Female", "Medium", R.drawable.img_puppy_jojo, "Los Angeles, CA"
             ),
             Puppy(
                 "Rosie",
-                "You can fill out an adoption application online on our official website.Sweet as Apple Pie!" +
-                        "Rosie is a 12 pound, 15 year old Chihuahua mix.",
+                "You can fill out an adoption application online on our official website.Sweet as Apple Pie! Rosie is a 12 pound, 15 year old Chihuahua mix.",
                 "Senior", "Female", "Senior", R.drawable.img_puppy_rosie, "Los Angeles, CA"
             ),
             Puppy(
                 "Finn",
-                "Finn is super smart and fun. He is high energy and very athletic." +
-                        "He would excel at a job or sport that would challenge him.",
+                "Finn is super smart and fun. He is high energy and very athletic. He would excel at a job or sport that would challenge him.",
                 "Adult", "Male", "Medium", R.drawable.img_puppy_finn, "Santa Clara, CA"
             ),
             Puppy(
                 "Cassie",
-                "Cassie is a 1 1/2 year old female cattledog." +
-                        " She is fine with other dogs and unknown how she is with cats. ",
+                "Cassie is a 1 1/2 year old female cattledog. She is fine with other dogs and unknown how she is with cats. ",
                 "Adult", "Female", "Medium", R.drawable.img_puppy_cassie, "Santa Clara, CA"
             ),
             Puppy(
                 "Tucker",
-                "Tucker is a gorgeous, sweet, and delightful 2 year old male Cattledog," +
-                        " who is looking for a family to call his own. ",
+                "Tucker is a gorgeous, sweet, and delightful 2 year old male Cattledog, who is looking for a family to call his own. ",
                 "Adult", "Male", "Medium", R.drawable.img_puppy_tucker, "Santa Clara, CA"
             ),
             Puppy(
                 "Sia",
-                "Hi, I'm Sia! I am a young gal with a lot of energy and would " +
-                        "thrive in a very active household! Want to go for a hike?",
+                "Hi, I'm Sia! I am a young gal with a lot of energy and would thrive in a very active household! Want to go for a hike?",
                 "Young", "Female", "Medium", R.drawable.img_puppy_sia, "Santa Clara, CA"
             ),
         )
