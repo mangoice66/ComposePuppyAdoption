@@ -18,8 +18,11 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import com.example.androiddevchallenge.R
 import com.example.androiddevchallenge.data.Puppy
+import com.example.androiddevchallenge.ui.theme.MyTheme
 
 @Composable
 fun PuppyList(puppyList: List<Puppy>, onPuppyClick: (Puppy) -> Unit = {}) {
@@ -57,5 +60,18 @@ fun PuppyItem(puppy: Puppy, modifier: Modifier = Modifier) {
                 Text(puppy.location, style = MaterialTheme.typography.body2)
             }
         }
+    }
+}
+
+@Preview
+@Composable
+fun PuppyItemPreview() {
+    MyTheme {
+        PuppyItem(
+            Puppy(
+                "Lily", "A dog", "Young",
+                "Adult", "Female", R.drawable.img_puppy_storm, "Sunnyvale, CA"
+            )
+        )
     }
 }
