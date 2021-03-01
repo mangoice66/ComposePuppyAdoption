@@ -33,7 +33,7 @@ class MainViewModel : ViewModel() {
                     "Rosie is a 12 pound, 15 year old Chihuahua mix."
                 , "Senior", "Female", "Senior", R.drawable.img_puppy_rosie, "Los Angeles, CA"
             ),
-            Puppy("Finn", "Finn is super smart and fun. He is high energy and very athletic.\n" +
+            Puppy("Finn", "Finn is super smart and fun. He is high energy and very athletic." +
                     "He would excel at a job or sport that would challenge him."
                 , "Adult", "Male", "Medium", R.drawable.img_puppy_finn, "Santa Clara, CA"
             ),
