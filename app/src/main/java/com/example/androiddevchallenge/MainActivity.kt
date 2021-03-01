@@ -17,15 +17,22 @@ package com.example.androiddevchallenge
 
 import android.os.Bundle
 import androidx.activity.compose.setContent
+import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
-import androidx.compose.material.MaterialTheme
-import androidx.compose.material.Surface
-import androidx.compose.material.Text
+import androidx.compose.material.*
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.rememberCoroutineScope
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import com.example.androiddevchallenge.ui.theme.MyTheme
+import kotlinx.coroutines.launch
+import androidx.lifecycle.viewmodel.compose.viewModel
+import com.example.androiddevchallenge.ui.theme.PuppyDetail
+import com.example.androiddevchallenge.ui.theme.PuppyList
 
 class MainActivity : AppCompatActivity() {
+    private val viewModel by viewModels<MainViewModel>()
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
@@ -34,13 +41,46 @@ class MainActivity : AppCompatActivity() {
             }
         }
     }
+
+    override fun onBackPressed() {
+        if (viewModel.currentPuppy != null) {
+            viewModel.closeDetail()
+        } else {
+            super.onBackPressed()
+        }
+    }
 }
 
 // Start building your app here!
 @Composable
 fun MyApp() {
-    Surface(color = MaterialTheme.colors.background) {
-        Text(text = "Ready... Set... GO!")
+    val snackbarHostState = SnackbarHostState()
+    val coroutineScope = rememberCoroutineScope()
+    Scaffold(
+        topBar = {
+            TopAppBar(
+                title = {
+                    Text(stringResource(id = R.string.app_name))
+                }
+            )
+        },
+        snackbarHost = {
+            SnackbarHost(snackbarHostState)
+        }
+    ) {
+        val viewModel: MainViewModel = viewModel()
+        PuppyList(viewModel.puppyList) { puppy ->
+            viewModel.showDetail(puppy)
+        }
+        val puppy = viewModel.currentPuppy
+        if (puppy != null) {
+            PuppyDetail(puppy) {
+                coroutineScope.launch {
+                    snackbarHostState.showSnackbar(
+                        "Your adoption request has been sent, please wait for the reply")
+                }
+            }
+        }
     }
 }
 
