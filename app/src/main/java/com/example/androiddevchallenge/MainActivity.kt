@@ -81,7 +81,8 @@ fun MyApp() {
             PuppyDetail(puppy) {
                 coroutineScope.launch {
                     snackbarHostState.showSnackbar(
-                        "Your adoption request has been sent, please wait for the reply")
+                        "Your adoption request has been sent, please wait for the reply"
+                    )
                 }
             }
         }
